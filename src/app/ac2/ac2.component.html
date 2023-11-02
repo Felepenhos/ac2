@@ -1,0 +1,8 @@
+<h2>Tarefas</h2>
+ 
+ <ul class="ac2">
+ <li *ngFor="let task of tasks" [ngStyle]="{ 'text-decoration': task.concluida ? 'line-through' : 'none' }">
+ {{ task.description }}
+ <button (click)="toggleCompletion(task)">Concluir</button>
+ </li>
+ </ul>
